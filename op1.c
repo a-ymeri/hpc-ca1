@@ -45,6 +45,7 @@ void op1 (float *input_vec, int m, int n , float *filter_vec, int k, float *outp
                 //multiply matrix at i,j with filter matrix
                 output[ba][i][j] = 0;
                 for (x=0; x<k; x++) { // row of filter
+		    #pragma omp simd
                     for (y=0; y<k; y++) { // column of filter
                         //print i, j
                         output[ba][i][j] += input[ba][i-b_lower+x][j-b_lower+y] * filter[x][y];

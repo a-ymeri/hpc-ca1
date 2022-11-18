@@ -40,7 +40,7 @@ void op1 (float *input_vec, int m, int n , float *filter_vec, int k, float *outp
 
 
     int ii, jj;
-    #pragma omp parallel for private(i,j,ii,jj,x,y, ba) shared(input, filter, output, m, n, k, b, row_start, row_end, col_start, col_end) collapse(3)
+    #pragma omp parallel for private(i,j,ii,jj,x,y, ba) shared(input, filter, output, m, n, k, b, row_start, row_end, col_start, col_end) collapse(2)
      for (ba = 0; ba<b; ba++){
         for (ii=row_start; ii<row_end; ii+=block_size) { // row
             // int i_max = ii+block_size < row_end ? ii+block_size : row_end;
