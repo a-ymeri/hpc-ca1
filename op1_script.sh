@@ -87,3 +87,7 @@ if test -x $EXE; then
       ./${EXE} input_64_512_960.dat kernel_5.dat output_64_512_960x5.dat;echo '---'; echo
       ./${EXE} input_64_512_960.dat kernel_5.dat output_64_512_960x5.dat;echo '---'; echo
       ./${EXE} input_64_512_960.dat kernel_5.dat output_64_512_960x5.dat;echo '---'
+      
+else
+     echo $SRC did not built to $EXE
+fi
