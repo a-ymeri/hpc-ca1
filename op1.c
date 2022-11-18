@@ -30,7 +30,9 @@ void op1 (float *input_vec, int m, int n , float *filter_vec, int k, float *outp
     for (ba=0; ba<b; ba++) {
         for (i=0; i<m; i++) {
             for (j=0; j<n; j++) {
-                output[ba][i][j] = input[ba][i][j];
+                if(i < row_start || i >= row_end || j < col_start || j >= col_end) {
+                    output[ba][i][j] = input[ba][i][j];
+                }
             }
         }
     }

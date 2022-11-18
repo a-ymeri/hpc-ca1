@@ -7,28 +7,33 @@ if test -x $EXE; then
       export OMP_NUM_THREADS=1 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times
-      ./${EXE};echo '---'
-	
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'	
       export OMP_NUM_THREADS=2 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'; echo
       ./${EXE};echo '---'
-
       export OMP_NUM_THREADS=4 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times	
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'; echo
       ./${EXE};echo '---'
-
       export OMP_NUM_THREADS=8 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'; echo
       ./${EXE};echo '---'
-
       export OMP_NUM_THREADS=16 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'; echo
       ./${EXE};echo '---'
-
       export OMP_NUM_THREADS=32 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times
@@ -49,12 +54,16 @@ if test -x $EXE2; then
       export OMP_NUM_THREADS=1 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times
-      ./${EXE2};echo '---'
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'
 
       export OMP_NUM_THREADS=2 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
       # run multiple times
-      ./${EXE2};echo '---'
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'; echo
+      ./${EXE};echo '---'
 
       export OMP_NUM_THREADS=4 # if '-c' not used then default to 1
       echo using ${OMP_NUM_THREADS} OpenMP threads
