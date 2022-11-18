@@ -1,3 +1,4 @@
+#!/bin/bash -l
 EXE=run.exe
 rm -f ${EXE2}
 icc -qopenmp -O3 op1_main.c op1.c -o run.exe -std:c99
