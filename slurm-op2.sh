@@ -1,7 +1,7 @@
 #!/bin/bash -l
 EXE=run.exe
 rm -f ${EXE}
-icc -qopenmp -O3 op2_main.c op2.c -o run2.exe -std:c99
+icc -qopenmp -O3 op2_main.c op2.c -o run.exe -std:c99
 if test -x $EXE; then
       # set number of threads
       export OMP_NUM_THREADS=1 # if '-c' not used then default to 1
